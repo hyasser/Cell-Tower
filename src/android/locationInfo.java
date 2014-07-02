@@ -11,7 +11,7 @@ import android.telephony.TelephonyManager;
 import android.telephony.gsm.GsmCellLocation;
 import android.util.Log;
 
-public class Location extends CordovaPlugin {
+public class LocationInfo extends CordovaPlugin {
 
 	public static final String ACTION = "locationAction";
 
