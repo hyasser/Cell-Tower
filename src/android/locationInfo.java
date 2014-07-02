@@ -11,22 +11,21 @@ import android.telephony.TelephonyManager;
 import android.telephony.gsm.GsmCellLocation;
 import android.util.Log;
 
+import org.apache.cordova.api;
+
 public class LocationInfo extends CordovaPlugin {
 
 	public static final String ACTION = "locationAction";
-
-	int CID;
 
 	@Override
 	public boolean execute(String action, JSONArray data,
 			CallbackContext callbackContext) throws JSONException {
 
-		PluginResult.Status status = PluginResult.Status.OK;
 		try {
 			if (action.equals(ACTION)) {
-				CID = getCID();
-				Toast.makeText(cordova.getActivity(), "Your CID is "+
-						CID, Toast.LENGTH_LONG).show();
+				int CID = this.getCID();
+//				Toast.makeText(cordova.getActivity(), "Your CID is "+
+//						CID, Toast.LENGTH_LONG).show();
 				// callbackContext.success(CID);
 				callbackContext.success();
 				return true;
@@ -42,7 +41,7 @@ public class LocationInfo extends CordovaPlugin {
 
 	private int getCID() throws IOException {
 		TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-		location = (GsmCellLocation) tm.getCellLocation();
+		GsmCellLocation location = (GsmCellLocation) tm.getCellLocation();
 		int cellID = location.getCid();
 		Log.i("Cell ID", cellID+"");
 		return cellID;
