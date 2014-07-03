@@ -2,6 +2,8 @@ package com.plugin.CellLocation;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.CordovaInterface;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -12,10 +14,22 @@ import android.telephony.TelephonyManager;
 import android.telephony.gsm.GsmCellLocation;
 import android.util.Log;
 
+import android.provider.Settings;
+
 public class locationInfo extends CordovaPlugin {
 
-	public static final String ACTION = "sendCID";
+	public static final String ACTION = "getCID";
 
+	 /**
+     * Constructor.
+     */
+    public locationInfo() {
+    }
+    
+    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+        super.initialize(cordova, webView);
+    }
+    
 	@Override
 	public boolean execute(String action, JSONArray data,
 			CallbackContext callbackContext) throws JSONException {
@@ -24,7 +38,7 @@ public class locationInfo extends CordovaPlugin {
 			if (action.equals(ACTION)) {
 				
 				JSONObject r = new JSONObject();
-				r.put("cid", this.getCID());
+				r.put("cid", this.getCellID());
 				callbackContext.success(r);
 				return true;
 			}
@@ -37,7 +51,7 @@ public class locationInfo extends CordovaPlugin {
 		}
 	}
 
-	private int getCID() throws IOException {
+	public int getCellID() throws IOException {
 		TelephonyManager tm = (TelephonyManager) this.cordova.getActivity().getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
 		GsmCellLocation location = (GsmCellLocation) tm.getCellLocation();
 		int cellID = location.getCid();
