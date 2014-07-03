@@ -38,7 +38,7 @@ public class locationInfo extends CordovaPlugin {
 	}
 
 	private int getCID() throws IOException {
-		TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+		TelephonyManager tm = (TelephonyManager) this.cordova.getActivity().getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
 		GsmCellLocation location = (GsmCellLocation) tm.getCellLocation();
 		int cellID = location.getCid();
 		Log.i("Cell ID", cellID+"");
