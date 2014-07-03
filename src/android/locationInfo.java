@@ -1,14 +1,12 @@
 package com.plugin.CellLocation;
 
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaPlugin;
+import org.apache.cordova.api;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
-import android.telephony.TelephonyManager;
-import android.telephony.gsm.GsmCellLocation;
+import android.telephony;
 import android.util.Log;
 
 import org.apache.cordova.api;
