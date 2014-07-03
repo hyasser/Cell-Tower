@@ -16,7 +16,7 @@ import android.util.Log;
 
 import android.provider.Settings;
 
-public class locationInfo extends CordovaPlugin {
+public class LocationInfo extends CordovaPlugin {
 
 	public static final String ACTION = "getCID";
 
