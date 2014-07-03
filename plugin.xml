@@ -33,7 +33,7 @@
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         </config-file>
         
-        <source-file src="src/android/locationInfo.java" target-dir="src/com/plugin/CellLocation"/>	
+        <source-file src="src/android/LocationInfo.java" target-dir="src/com/plugin/CellLocation"/>	
         	
     </platform>
     
