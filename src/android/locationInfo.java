@@ -13,7 +13,7 @@ import android.util.Log;
 
 import org.apache.cordova.api;
 
-public class LocationInfo extends CordovaPlugin {
+public class locationInfo extends CordovaPlugin {
 
 	public static final String ACTION = "locationAction";
 
