@@ -12,7 +12,7 @@ import android.telephony.TelephonyManager;
 import android.telephony.gsm.GsmCellLocation;
 import android.util.Log;
 
-public class LocationInfo extends CordovaPlugin {
+public class locationInfo extends CordovaPlugin {
 
 	public static final String ACTION = "sendCID";
 
