@@ -12,9 +12,9 @@ import android.telephony.TelephonyManager;
 import android.telephony.gsm.GsmCellLocation;
 import android.util.Log;
 
-public class locationInfo extends CordovaPlugin {
+public class LocationInfo extends CordovaPlugin {
 
-	public static final String ACTION = "locationAction";
+	public static final String ACTION = "sendCID";
 
 	@Override
 	public boolean execute(String action, JSONArray data,
@@ -22,11 +22,10 @@ public class locationInfo extends CordovaPlugin {
 
 		try {
 			if (action.equals(ACTION)) {
-				int CID = this.getCID();
-//				Toast.makeText(cordova.getActivity(), "Your CID is "+
-//						CID, Toast.LENGTH_LONG).show();
-				// callbackContext.success(CID);
-				callbackContext.success();
+				
+				JSONObject r = new JSONObject();
+				r.put("cid", this.getCID());
+				callbackContext.success(r);
 				return true;
 			}
 			callbackContext.error("Invalid action");
