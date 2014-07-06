@@ -1,4 +1,4 @@
-package com.plugin.CellLocation;
+package com.telepin.cellTower;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;

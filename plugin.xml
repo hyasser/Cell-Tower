@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.plugin.CellLocation"
+    id="com.telepin.CellTower"
     version="0.0.0">
         
 	<name>LocationInfo</name>
@@ -24,7 +24,7 @@
 		
 		<config-file target="res/xml/config.xml" parent="/*">
 		  <feature name="LocationInfo">
-          	<param name="android-package" value="com.plugin.CellLocation.locationInfo"/>
+          	<param name="android-package" value="com.telepin.CellTower.locationInfo"/>
           </feature>
 		</config-file>	
 		
@@ -33,7 +33,7 @@
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         </config-file>
         
-        <source-file src="src/android/locationInfo.java" target-dir="src/com/plugin/CellLocation"/>	
+        <source-file src="src/android/locationInfo.java" target-dir="src/com/telepin/CellTower"/>	
         	
     </platform>
     
