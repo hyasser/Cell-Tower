@@ -9,13 +9,13 @@ channel.createSticky('onCordovaInfoReady');
 channel.waitForInitialization('onCordovaInfoReady');
 
 
-// function locationInfo() {
+// function LocationInfo() {
 // this.cid = null;
 // alert("inside location info");
 // }
-// var me = new locationInfo();
+// var me = new LocationInfo();
 
-//var locationInfo = function() {
+//var LocationInfo = function() {
 function LocationInfo() {
 	this.cid = null;
 
@@ -44,5 +44,5 @@ LocationInfo.prototype.getInfo = function(successCallback, errorCallback) {
 }
 
 //module.exports = me;
-// var locationInfo = new locationInfo();
+// var LocationInfo = new LocationInfo();
  module.exports = new LocationInfo();
