@@ -15,7 +15,7 @@
 	</engines>  
 	
 	<js-module src="www/LocationInfo.js" name="LocationInfo">
-        <clobbers target="plugins.locationInfo" />
+        <clobbers target="plugins.LocationInfo" />
    	</js-module>
     
 	<platform name="android">
