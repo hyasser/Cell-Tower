@@ -26,10 +26,10 @@ public class LocationInfo extends CordovaPlugin {
     public LocationInfo() {
     }
     
-    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-        super.initialize(cordova, webView);
-    }
-    
+//    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+//        super.initialize(cordova, webView);
+//    }
+//    
 	@Override
 	public boolean execute(String action, JSONArray data,
 			CallbackContext callbackContext) throws JSONException {

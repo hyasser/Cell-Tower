@@ -8,7 +8,7 @@
 	
 	<description>Location Information for Cordova</description>
 	
-	<license>MIT</license>
+	<license>Apache 2.0 License</license>
 	
 	<engines>
 		<engine name="cordova" version=">=3.0.0" />
@@ -19,8 +19,6 @@
    	</js-module>
     
 	<platform name="android">
-	
-	 	<asset src="www/LocationInfo.js" target="LocationInfo.js" />
 		
 		<config-file target="res/xml/config.xml" parent="/*">
 		  <feature name="LocationInfo">
@@ -33,7 +31,7 @@
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         </config-file>
         
-        <source-file src="src/android/LocationInfo.java" target-dir="src/com/telepin/CellTower"/>	
+        <source-file src="src/android/LocationInfo.java" target-dir="src/com/telepin/CellTower"/>
         	
     </platform>
     

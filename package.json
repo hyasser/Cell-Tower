@@ -1,0 +1,16 @@
+{
+    "version": "0.0.0",
+    "name": "com.telepin.CellTower",
+    "cordova_name": "LocationInfo",
+    "description": "Cordova Cell Tower Plugin",
+    "license": "Apache 2.0",
+    "repo": "https://github.com/hyasser/Cell-Tower",
+    "keywords": [
+        "cordova",
+        "CellTower"
+    ],
+    "platforms": [
+        "android"
+    ],
+    "engines": [],  
+}
