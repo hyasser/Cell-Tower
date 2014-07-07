@@ -26,7 +26,7 @@ function LocationInfo() {
             channel.OnCordovaConnectionReady.fire();
           //  channel.onCordovaInfoReady.fire();
         },function(e) {
-            utils.alert("[ERROR] Error initializing Cordova: " + e);
+            utils.alert("[ERROR-celltower] Error initializing Cordova: " + e);
         });
     });
 }

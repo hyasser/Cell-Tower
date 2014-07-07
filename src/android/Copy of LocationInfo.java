@@ -18,25 +18,25 @@ import android.provider.Settings;
 
 public class LocationInfo extends CordovaPlugin {
 
-	public static final String ACTION = "getCID";
+	/**
+	 * Constructor.
+	 */
+	public LocationInfo() {
+	}
 
-	 /**
-     * Constructor.
-     */
-    public LocationInfo() {
-    }
-    
-//    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-//        super.initialize(cordova, webView);
-//    }
-//    
+	@override
+	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+		super.initialize(cordova, webView);
+		public static final String ACTION = "getCID";
+	}
+
 	@Override
 	public boolean execute(String action, JSONArray data,
 			CallbackContext callbackContext) throws JSONException {
 
 		try {
 			if (action.equals(ACTION)) {
-				
+
 				JSONObject r = new JSONObject();
 				r.put("cid", this.getCellID());
 				callbackContext.success(r);
@@ -52,10 +52,12 @@ public class LocationInfo extends CordovaPlugin {
 	}
 
 	public int getCellID() throws IOException {
-		TelephonyManager tm = (TelephonyManager) this.cordova.getActivity().getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
+		TelephonyManager tm = (TelephonyManager) this.cordova.getActivity()
+				.getApplicationContext()
+				.getSystemService(Context.TELEPHONY_SERVICE);
 		GsmCellLocation location = (GsmCellLocation) tm.getCellLocation();
 		int cellID = location.getCid();
-		Log.i("Cell ID", cellID+"");
+		Log.i("Cell ID", cellID + "");
 		return cellID;
 	}
 

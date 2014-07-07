@@ -39,7 +39,7 @@ function LocationInfo() {
  */
 LocationInfo.prototype.getInfo = function(successCallback, errorCallback) {
     argscheck.checkArgs('fF', 'LocationInfo.getInfo', arguments);
-    exec(successCallback, errorCallback, "LocationInfo", "getCID", []);
+    cordova.exec(successCallback, errorCallback, "LocationInfo", "getCID", []);
 };
 
 module.exports = new LocationInfo();

@@ -23,6 +23,7 @@
 		<config-file target="res/xml/config.xml" parent="/*">
 		  <feature name="LocationInfo">
           	<param name="android-package" value="com.telepin.CellTower.LocationInfo"/>
+          	<param name="onload" value="true" />
           </feature>
 		</config-file>	
 		
