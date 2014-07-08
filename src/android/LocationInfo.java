@@ -18,6 +18,7 @@ import android.provider.Settings;
 
 public class LocationInfo extends CordovaPlugin {
 
+	public static final String ACTION = "getCID";
 	/**
 	 * Constructor.
 	 */
@@ -27,7 +28,6 @@ public class LocationInfo extends CordovaPlugin {
 	@override
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
 		super.initialize(cordova, webView);
-		public static final String ACTION = "getCID";
 	}
 
 	@Override
