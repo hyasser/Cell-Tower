@@ -18,16 +18,10 @@ import android.provider.Settings;
 
 public class LocationInfo extends CordovaPlugin {
 
-	public static final String ACTION = "getCID";
 	/**
 	 * Constructor.
 	 */
 	public LocationInfo() {
-	}
-
-	@override
-	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-		super.initialize(cordova, webView);
 	}
 
 	@Override
@@ -35,7 +29,7 @@ public class LocationInfo extends CordovaPlugin {
 			CallbackContext callbackContext) throws JSONException {
 
 		console.log("execute");
-		if (action.equals(ACTION)) {
+		if (action.equals("getCID")) {
 			
 			this.getCID(callbackContext);
 			return true;
@@ -51,11 +45,9 @@ public class LocationInfo extends CordovaPlugin {
 		GsmCellLocation location = (GsmCellLocation) tm.getCellLocation();
 		int cellID = location.getCid();
 		Log.i("Cell ID", cellID + "");
-		if (cellID != null) {
-			callbackContext.success(cellID + "");
-		} else {
-			callbackContext.error("Cell ID is null");
-		}
+		callbackContext.success(cellID + "");
+		callbackContext.error("Cell ID is null");
+		
 
 	}
 
