@@ -42,11 +42,11 @@ public class LocationInfo extends CordovaPlugin {
 				.getApplicationContext()
 				.getSystemService(Context.TELEPHONY_SERVICE);
 		GsmCellLocation location = (GsmCellLocation) tm.getCellLocation();
-		Integer cellID = null;
-		cellID = location.getCid();
+		int cellID = location.getCid();
+		String cid = cellID + "";
 		
-		if (cellID != null) {
-			callbackContext.success(cellID + "");
+		if (cid != null) {
+			callbackContext.success(cid);
 		} else {
 			callbackContext.error("Cell ID is null");
 		}
