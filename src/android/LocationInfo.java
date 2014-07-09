@@ -28,7 +28,6 @@ public class LocationInfo extends CordovaPlugin {
 	public boolean execute(String action, JSONArray data,
 			CallbackContext callbackContext) throws JSONException {
 
-		console.log("execute");
 		if (action.equals("getCID")) {
 			
 			this.getCID(callbackContext);
